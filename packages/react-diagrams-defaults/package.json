@@ -8,7 +8,8 @@
 		"url": "https://github.com/projectstorm/react-diagrams.git"
 	},
 	"scripts": {
-		"clean": "rm -rf ./dist",
+    "clean": "if exist .\\dist\\ rmdir .\\dist\\ /q /s",
+		"clean:linux": "rm -rf ./dist",
 		"build": "../../node_modules/.bin/webpack",
 		"build:prod": "NODE_ENV=production ../../node_modules/.bin/webpack"
 	},
